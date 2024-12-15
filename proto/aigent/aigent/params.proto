@@ -1,0 +1,15 @@
+syntax = "proto3";
+package aigent.aigent;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+
+option go_package = "aigent/x/aigent/types";
+
+// Params defines the parameters for the module.
+message Params {
+  option (amino.name) = "aigent/x/aigent/Params";
+  option (gogoproto.equal) = true;
+
+  
+}

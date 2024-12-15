@@ -1,0 +1,17 @@
+syntax = "proto3";
+package aigent.aigent;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+import "aigent/aigent/params.proto";
+
+option go_package = "aigent/x/aigent/types";
+
+// GenesisState defines the aigent module's genesis state.
+message GenesisState {
+  // params defines all the parameters of the module.
+  Params params = 1 [
+    (gogoproto.nullable) = false,
+    (amino.dont_omitempty) = true
+  ];
+}
